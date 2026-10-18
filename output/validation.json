@@ -1,0 +1,26 @@
+{
+  "blender": "4.3.2",
+  "units": "metres",
+  "shell_min": [
+    -76.00000762939453,
+    -76.00000762939453,
+    0.0
+  ],
+  "shell_max": [
+    76.00000762939453,
+    76.00000762939453,
+    234.00001525878906
+  ],
+  "shell_height": 234.00001525878906,
+  "objects": 2259,
+  "mesh_faces": 60363,
+  "cameras": [
+    "01_front_hero",
+    "02_aerial",
+    "03_right_oblique",
+    "04_soffit"
+  ],
+  "external_image_files": [],
+  "shell_zero_area_faces": 0,
+  "limitations": "Reference-derived visual reconstruction. Estimated plan dimensions, procedural diagrid, simplified city context; not surveyed geometry."
+}
