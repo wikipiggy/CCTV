@@ -1,7 +1,7 @@
 """CCTV exterior study. Blender 4.3+: blender -b -t 5 --python build_cctv.py -- --stage final
 Metres; X east, Y north. Reference-derived reconstruction, not survey geometry.
 """
-import bpy, math, random, os, sys, argparse, json
+import bpy, math, random, os, sys, argparse, json, gzip
 from mathutils import Vector
 p=argparse.ArgumentParser();p.add_argument('--stage',default='final',choices=['massing','final']);p.add_argument('--samples',type=int,default=64);p.add_argument('--preview',action='store_true');a=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
 OUT=os.path.dirname(os.path.abspath(__file__));random.seed(57)
@@ -52,51 +52,16 @@ for k,cells in enumerate(occ):
    if (i+di,j+dj) not in cells:faces.append(([world(*q) for q in pts],'wall'))
   if k==0 or (i,j) not in occ[k-1]:faces.append(([world(x0,y0,z0),world(x0,y1,z0),world(x1,y1,z0),world(x1,y0,z0)],'soffit'))
   if k==2 or (i,j) not in occ[k+1]:faces.append(([world(x0,y0,z1),world(x1,y0,z1),world(x1,y1,z1),world(x0,y1,z1)],'roof'))
-# Shared planar mapping for shell panels, framing and diagonal cladding.
-V=[];F=[];IDs=[];mull=Beams();diag=Beams();edge=Beams()
-for fi,(q,kind) in enumerate(faces):
- A,B,C,D=q;U=(B-A).length;H=(D-A).length;n=(B-A).cross(D-A).normalized()
- def pt(u,v,offset=0):return A*(1-u)*(1-v)+B*u*(1-v)+C*u*v+D*(1-u)*v+n*offset
- if kind=='wall' and a.stage=='final':
-  nu=max(1,round(U/1.65));nv=max(1,round(H/3.8))
-  for u in range(nu):
-   for v in range(nv):
-    base=len(V);V.extend([pt(u/nu,v/nv),pt((u+1)/nu,v/nv),pt((u+1)/nu,(v+1)/nv),pt(u/nu,(v+1)/nv)]);F.append((base,base+1,base+2,base+3));IDs.append(random.randrange(16))
-  for u in range(nu+1):mull.add(pt(u/nu,0,.055),pt(u/nu,1,.055),.065,.095)
-  for v in range(nv+1):mull.add(pt(0,v/nv,.06),pt(1,v/nv,.06),.085,.1)
- else:
-  base=len(V);V+=q;F.append(tuple(range(base,base+4)));IDs.append(16 if kind=='roof' else (17 if kind=='soffit' else 6))
- for u in range(4):edge.add(q[u]+n*.10,q[(u+1)%4]+n*.10,.24)
- if a.stage=='final' and kind!='roof':
-  # Clip lines h = slope*u + intercept to the face. Added half-bays in high density zones.
-  for slope in [-1.32,1.32]:
-   step=18.0
-   for index in range(-int(U/step)-25,int(H/step)+25):
-    intercept=index*step
-    hits=[]
-    for x in [0,U]:
-     h=slope*x+intercept
-     if 0<=h<=H:hits.append((x,h))
-    for h in [0,H]:
-     x=(h-intercept)/slope
-     if 0<x<U:hits.append((x,h))
-    if len(hits)==2:
-     (x0,h0),(x1,h1)=hits
-     diag.add(pt(x0/U,h0/H,.25),pt(x1/U,h1/H,.25),.60,.28)
-   # Local diamond infill, deterministic and symmetric in both line families.
-   for index in range(-30,45):
-    intercept=(index+.5)*step;hits=[]
-    for x in [U*.27,U*.73]:
-     h=slope*x+intercept
-     if 0<=h<=H:hits.append((x,h))
-    for h in [0,H]:
-     x=(h-intercept)/slope
-     if U*.27<x<U*.73:hits.append((x,h))
-    if len(hits)==2:
-     (x0,h0),(x1,h1)=hits
-     diag.add(pt(x0/U,h0/H,.19),pt(x1/U,h1/H,.19),.25,.19)
-mesh('Continuous exterior shell and curtain panels',V,F,glass+[roof,steel],IDs);edge.finish('Facade perimeter flashing',frame)
-if a.stage=='final':mull.finish('Fine curtain wall aluminium grid',frame);diag.finish('Variable density diagonal exoskeleton',steel)
+# v2 exterior: real cut glass, merged recessed channels, no external facade rods.
+if a.stage=='final':
+ sys.path.insert(0,OUT)
+ from load_recessed_facade import load_recessed_facade
+ load_recessed_facade()
+else:
+ V=[];F=[];IDs=[]
+ for q,kind in faces:
+  base=len(V);V+=q;F.append(tuple(range(base,base+4)));IDs.append(16 if kind=='roof' else 6)
+ mesh('Continuous exterior shell and curtain panels',V,F,glass+[roof],IDs)
 # Site and road system, flat Beijing urban terrain.
 cube('Urban ground',(0,0,-1.5),(1800,1800,2),concrete);cube('Site plinth',(0,0,-.2),(270,290,1.1),stone)
 for x in [-170,165]:
@@ -158,6 +123,11 @@ bg=nt.nodes.new('ShaderNodeBackground');bg.inputs['Strength'].default_value=.3;n
 bpy.ops.object.light_add(type='SUN',location=(0,0,500));sun=bpy.context.object;sun.rotation_euler=(.55,-.55,0);sun.data.energy=1.6;sun.data.angle=.06
 bpy.ops.object.camera_add();cam=bpy.context.object;s.camera=cam;cam.data.clip_end=5000;cam.data.lens=48
 views=[('01_front_hero',(-340,-390,150),(0,0,111),48),('02_aerial',(-340,-380,340),(0,0,91),45),('03_right_oblique',(-165,-490,115),(0,0,115),48),('04_soffit',(-85,-100,5),(-10,-10,165),20)]
+if a.stage=='final':
+ with gzip.open(OUT+'/recessed_facade_geometry.json.gz','rt') as f:patchdata=json.load(f)['patches']
+ for patch,name in zip(patchdata,['05_closeup_glass_junction','06_closeup_glass_grazing']):
+  center=Vector(patch['point']);normal=Vector(patch['normal']);t=Vector(patch['tangent']);up=Vector(patch['up']);loc=center+normal*8+up if name.startswith('05') else center+normal*4+t*6+up*.5
+  views.append((name,tuple(loc),tuple(center),60))
 if a.stage=='massing':views=[('massing_perspective',(-340,-390,160),(0,0,115),48),('massing_north',(0,-500,117),(0,0,117),50),('massing_top',(0,0,600),(0,0,0),50)]
 cameras={}
 for name,pos,target,lens in views:
@@ -168,7 +138,9 @@ for name,pos,target,lens in views:
  cam=cameras[name];s.camera=cam
  cam.location=pos;cam.rotation_euler=(Vector(target)-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.lens=lens
  cam.data.type='ORTHO' if name.startswith('massing_') and name!='massing_perspective' else 'PERSP';cam.data.ortho_scale=290
- s.render.resolution_x=1000 if a.stage=='massing' else 1800;s.render.resolution_y=1000 if a.stage=='massing' else 1800
+ close=name.startswith(('05','06'))
+ s.render.resolution_x=1000 if a.stage=='massing' else (2000 if close else 1800);s.render.resolution_y=s.render.resolution_x
+ s.cycles.samples=max(96,a.samples) if close else a.samples;s.cycles.adaptive_threshold=.035 if close else .065;s.cycles.adaptive_min_samples=24 if close else 16
  s.render.filepath=os.path.join(OUT,'progress' if a.stage=='massing' else 'renders',name+'.png')
  if name==views[0][0]:bpy.ops.wm.save_as_mainfile(filepath=os.path.join(OUT,'cctv_massing.blend' if a.stage=='massing' else 'CCTV_Headquarters.blend'))
  if a.preview:s.render.resolution_percentage=50

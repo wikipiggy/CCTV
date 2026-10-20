@@ -1,26 +1,43 @@
 {
-  "blender": "4.3.2",
-  "units": "metres",
-  "shell_min": [
-    -76.00000762939453,
-    -76.00000762939453,
-    0.0
+  "version": 2,
+  "shell_height_m": 234.0,
+  "real_recess_geometry": true,
+  "primary_depth_m": 0.03,
+  "fine_joint_depth_m": 0.003,
+  "max_outward_offset_m": 0,
+  "raycast_verification": [
+    {
+      "patch": [
+        1,
+        0,
+        2,
+        -1,
+        0
+      ],
+      "object": "Recessed diagonal channel floors",
+      "measured_depth_m": 0.02999890936189331
+    },
+    {
+      "patch": [
+        1,
+        2,
+        0,
+        0,
+        -1
+      ],
+      "object": "Recessed diagonal channel floors",
+      "measured_depth_m": 0.02999890936189331
+    }
   ],
-  "shell_max": [
-    76.00000762939453,
-    76.00000762939453,
-    234.00001525878906
-  ],
-  "shell_height": 234.00001525878906,
-  "objects": 2259,
-  "mesh_faces": 60363,
   "cameras": [
     "01_front_hero",
     "02_aerial",
     "03_right_oblique",
-    "04_soffit"
+    "04_soffit",
+    "05_closeup_glass_junction",
+    "06_closeup_glass_grazing"
   ],
-  "external_image_files": [],
-  "shell_zero_area_faces": 0,
-  "limitations": "Reference-derived visual reconstruction. Estimated plan dimensions, procedural diagrid, simplified city context; not surveyed geometry."
+  "coverage_checks_passed": 35,
+  "mesh_faces": 331392,
+  "external_images": []
 }

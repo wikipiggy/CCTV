@@ -1,0 +1,90 @@
+{
+  "CCTV_Headquarters.blend": {
+    "bytes": 46082732,
+    "sha256": "3975ddf07fe3849fec78e6eabdb695e9baf559e4dea3bada0912b9d5afa38083"
+  },
+  "build_cctv.py": {
+    "bytes": 11849,
+    "sha256": "e343d84848db15b77a7108bd1df614bc05bc17cd06040173bb18f0433b3d06ee"
+  },
+  "urban_details.py": {
+    "bytes": 1464,
+    "sha256": "8bdf60de810702d7676a2cbd5921c7099d6e624883ed8b8802dd480530c2b6e2"
+  },
+  "load_recessed_facade.py": {
+    "bytes": 1889,
+    "sha256": "016ca6dfd79420453f26e2fdb7b779f5da31d81c130da4e4c655f0c39bd86504"
+  },
+  "generate_recessed_facade.py": {
+    "bytes": 6891,
+    "sha256": "301d70292555c7b74cfee0bb30fe788665f9dbc3e675e4611ad279c9fc764c4a"
+  },
+  "recessed_facade_geometry.json.gz": {
+    "bytes": 11998978,
+    "sha256": "45d0bfa0f2fa0f976069c8a39847f7e24f30ee7a9556737f1dd27711e27905a5"
+  },
+  "denoise.py": {
+    "bytes": 1312,
+    "sha256": "8681b19b5a71288bfca0fe37e317ed208afa1a245d2620db7ad11547c41045e6"
+  },
+  "requirements-render.txt": {
+    "bytes": 35,
+    "sha256": "8bc5ff063d4713b3658dcc9dbd177ce8d58bcc19ea2d99bdf6641b2c28ce1c7b"
+  },
+  "requirements-geometry.txt": {
+    "bytes": 15,
+    "sha256": "f7067789204b3605ebf536aa09088d7e7a931b17384b502c19fe5f1014f31d0f"
+  },
+  "README_zh.md": {
+    "bytes": 3180,
+    "sha256": "498dc55d18cc4860f29a8264a925cd767d11ed0db3bcb7a6291eda6fc0bbc484"
+  },
+  "validation.json": {
+    "bytes": 824,
+    "sha256": "ac88e7e3b7ab52a612e9c8c23a575ba6ee3df7814cc64322bd543ceec417e30c"
+  },
+  "recessed_facade_validation.json": {
+    "bytes": 11418,
+    "sha256": "60ca7aa6545ed424f722f127a88f5dbd9f497dd8125fe115e59999c0cbada536"
+  },
+  "render_revision_report.json": {
+    "bytes": 976,
+    "sha256": "1730cd32f670821fb0ded4c09a26c20f0ae15b51f356af0f0f9a258bef63a3e3"
+  },
+  "render_recessed_revision.py": {
+    "bytes": 1277,
+    "sha256": "18699a59c4029c34f64dc49ef4630c4a314a6f7aac9cf6740b6c8d922face131"
+  },
+  "validate_recessed_facade.py": {
+    "bytes": 1710,
+    "sha256": "d06befe96a401b520fa8f0725c6cf2b5e717d01df5b859e3def70a5af5322e2e"
+  },
+  "package_recessed_delivery.py": {
+    "bytes": 1941,
+    "sha256": "ff739a1e076d7138e9f7907402dba9c90864a531fa56a16b7137b82b710413cb"
+  },
+  "renders/05_closeup_glass_junction_denoised.png": {
+    "bytes": 980848,
+    "sha256": "dcf75bbabb3c691ad7550e84053ba46f691589e69c0e3b2b1e5cfe02fabbd421"
+  },
+  "renders/06_closeup_glass_grazing_denoised.png": {
+    "bytes": 1145537,
+    "sha256": "af839c591fd23e645e6ee30c88d90514463c14ef58c9c5d7864c1d70ad7a273c"
+  },
+  "renders/01_front_hero_denoised.png": {
+    "bytes": 1700849,
+    "sha256": "f7289a86cff92cf87903bc298e9f3b4e3ed9635cd413eff4f5ca5a3a26db1d28"
+  },
+  "renders/02_aerial_denoised.png": {
+    "bytes": 1698760,
+    "sha256": "f4073fed30f3396ca938545273e020079e72662b8450453baef3eafd99e804b1"
+  },
+  "renders/03_right_oblique_denoised.png": {
+    "bytes": 1578162,
+    "sha256": "ac6d8d3e3a25a2d323f2650c103320f26bff4d47c3533068ef9ebed736ef706f"
+  },
+  "renders/04_soffit_denoised.png": {
+    "bytes": 1175636,
+    "sha256": "2a85006b0ece3a26ae8c4e34c8acdb86c12a77f393699640b1ae7563ab26e97e"
+  }
+}
