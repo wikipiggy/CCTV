@@ -1,48 +1,48 @@
 {
-  "revision": 2,
-  "started_unix": 1792485422.7448616,
+  "revision": 3,
+  "started_unix": 1792498690.3607712,
   "views": [
     {
       "name": "05_closeup_glass_junction",
       "width": 2000,
       "height": 2000,
       "samples_cap": 96,
-      "seconds": 174.47856616973877
+      "seconds": 173.17249274253845
     },
     {
       "name": "06_closeup_glass_grazing",
       "width": 2000,
       "height": 2000,
       "samples_cap": 96,
-      "seconds": 188.17134261131287
+      "seconds": 177.10795140266418
     },
     {
       "name": "01_front_hero",
       "width": 1800,
       "height": 1800,
       "samples_cap": 64,
-      "seconds": 89.31403923034668
+      "seconds": 89.90810370445251
     },
     {
       "name": "02_aerial",
       "width": 1800,
       "height": 1800,
       "samples_cap": 64,
-      "seconds": 99.5606300830841
+      "seconds": 99.12227272987366
     },
     {
       "name": "03_right_oblique",
       "width": 1800,
       "height": 1800,
       "samples_cap": 64,
-      "seconds": 77.76235365867615
+      "seconds": 77.59049105644226
     },
     {
       "name": "04_soffit",
       "width": 1800,
       "height": 1800,
       "samples_cap": 64,
-      "seconds": 62.343973875045776
+      "seconds": 56.98957943916321
     }
   ]
 }

@@ -52,7 +52,7 @@ for k,cells in enumerate(occ):
    if (i+di,j+dj) not in cells:faces.append(([world(*q) for q in pts],'wall'))
   if k==0 or (i,j) not in occ[k-1]:faces.append(([world(x0,y0,z0),world(x0,y1,z0),world(x1,y1,z0),world(x1,y0,z0)],'soffit'))
   if k==2 or (i,j) not in occ[k+1]:faces.append(([world(x0,y0,z1),world(x1,y0,z1),world(x1,y1,z1),world(x0,y1,z1)],'roof'))
-# v2 exterior: real cut glass, merged recessed channels, no external facade rods.
+# v3 exterior: real cut glass, merged recessed channels, no external facade rods.
 if a.stage=='final':
  sys.path.insert(0,OUT)
  from load_recessed_facade import load_recessed_facade

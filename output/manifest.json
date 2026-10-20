@@ -1,27 +1,27 @@
 {
   "CCTV_Headquarters.blend": {
-    "bytes": 46082732,
-    "sha256": "3975ddf07fe3849fec78e6eabdb695e9baf559e4dea3bada0912b9d5afa38083"
+    "bytes": 46105380,
+    "sha256": "222aa716e1f91801c74b52d01b496b04555821f5606e6fcc94854cd128d0b9b7"
   },
   "build_cctv.py": {
     "bytes": 11849,
-    "sha256": "e343d84848db15b77a7108bd1df614bc05bc17cd06040173bb18f0433b3d06ee"
+    "sha256": "895c05145a59db9efb335adc16a7d17fcb80c462cfdf3588cb3e378bd9763967"
   },
   "urban_details.py": {
     "bytes": 1464,
     "sha256": "8bdf60de810702d7676a2cbd5921c7099d6e624883ed8b8802dd480530c2b6e2"
   },
   "load_recessed_facade.py": {
-    "bytes": 1889,
-    "sha256": "016ca6dfd79420453f26e2fdb7b779f5da31d81c130da4e4c655f0c39bd86504"
+    "bytes": 2647,
+    "sha256": "98a16d05a3e30a56e33972f7187f30f7c892907a48e119a301bc0f10fc17851f"
   },
   "generate_recessed_facade.py": {
-    "bytes": 6891,
-    "sha256": "301d70292555c7b74cfee0bb30fe788665f9dbc3e675e4611ad279c9fc764c4a"
+    "bytes": 6939,
+    "sha256": "c41ea3baa01f692bb76e2eb635d1c85ad988d4f788c71e258d01033effd4751d"
   },
   "recessed_facade_geometry.json.gz": {
-    "bytes": 11998978,
-    "sha256": "45d0bfa0f2fa0f976069c8a39847f7e24f30ee7a9556737f1dd27711e27905a5"
+    "bytes": 12003120,
+    "sha256": "b87a80205b73ef2a1d24a45d4901e9e4dde4829ff33692417aa76a5f73e2af17"
   },
   "denoise.py": {
     "bytes": 1312,
@@ -36,55 +36,55 @@
     "sha256": "f7067789204b3605ebf536aa09088d7e7a931b17384b502c19fe5f1014f31d0f"
   },
   "README_zh.md": {
-    "bytes": 3180,
-    "sha256": "498dc55d18cc4860f29a8264a925cd767d11ed0db3bcb7a6291eda6fc0bbc484"
+    "bytes": 3452,
+    "sha256": "d8d6ea18afff57da62b5102ed5fdbdfd95e42bb15bd51c9f3494928f9b0cdd76"
   },
   "validation.json": {
-    "bytes": 824,
-    "sha256": "ac88e7e3b7ab52a612e9c8c23a575ba6ee3df7814cc64322bd543ceec417e30c"
+    "bytes": 1006,
+    "sha256": "5ea842ef7343822fb7132c7605f22800200c48758c2b843507ce1c8d64c3862e"
   },
   "recessed_facade_validation.json": {
-    "bytes": 11418,
-    "sha256": "60ca7aa6545ed424f722f127a88f5dbd9f497dd8125fe115e59999c0cbada536"
+    "bytes": 11382,
+    "sha256": "815343b866364a70102b00355bee944025037703c61f3eae70b6cf40d31132e9"
   },
   "render_revision_report.json": {
     "bytes": 976,
-    "sha256": "1730cd32f670821fb0ded4c09a26c20f0ae15b51f356af0f0f9a258bef63a3e3"
+    "sha256": "26ca66c2c05d76fc6b0239986bdfbf8a3507554b0f4924eb122785459b29af40"
   },
   "render_recessed_revision.py": {
     "bytes": 1277,
-    "sha256": "18699a59c4029c34f64dc49ef4630c4a314a6f7aac9cf6740b6c8d922face131"
+    "sha256": "6cf1e67a9c89ba2f8308d1375e6c4e3ada1e81649cb5b1898f31045572851b41"
   },
   "validate_recessed_facade.py": {
-    "bytes": 1710,
-    "sha256": "d06befe96a401b520fa8f0725c6cf2b5e717d01df5b859e3def70a5af5322e2e"
+    "bytes": 2327,
+    "sha256": "2c4eeee94ce10a6eccf97b125be8b695d1fe5661e230504739ceb17588b27853"
   },
   "package_recessed_delivery.py": {
-    "bytes": 1941,
-    "sha256": "ff739a1e076d7138e9f7907402dba9c90864a531fa56a16b7137b82b710413cb"
+    "bytes": 2073,
+    "sha256": "f662e6a46b35c462e80f71575ddb27f6c63b968005c2bb9c1e76f6de24fed58c"
   },
   "renders/05_closeup_glass_junction_denoised.png": {
-    "bytes": 980848,
-    "sha256": "dcf75bbabb3c691ad7550e84053ba46f691589e69c0e3b2b1e5cfe02fabbd421"
+    "bytes": 1044430,
+    "sha256": "3af79cba9478b114f7de01d0a42be9d9dae693b12eac0113e9eafa0d3f6cff87"
   },
   "renders/06_closeup_glass_grazing_denoised.png": {
-    "bytes": 1145537,
-    "sha256": "af839c591fd23e645e6ee30c88d90514463c14ef58c9c5d7864c1d70ad7a273c"
+    "bytes": 1148017,
+    "sha256": "5c4bfd115a9105b68955ec5965dc3c39f00dae4a044294705db4d645fc62909e"
   },
   "renders/01_front_hero_denoised.png": {
-    "bytes": 1700849,
-    "sha256": "f7289a86cff92cf87903bc298e9f3b4e3ed9635cd413eff4f5ca5a3a26db1d28"
+    "bytes": 1791393,
+    "sha256": "7a13fb979aef866876c4e8783b1c5f3f29e2ab6f5731c25b03ba63ab8b485993"
   },
   "renders/02_aerial_denoised.png": {
-    "bytes": 1698760,
-    "sha256": "f4073fed30f3396ca938545273e020079e72662b8450453baef3eafd99e804b1"
+    "bytes": 1740839,
+    "sha256": "ec42b5e299d03b64f25dbb53e3b445dab774b1659bfca46ca09b2e16604db41f"
   },
   "renders/03_right_oblique_denoised.png": {
-    "bytes": 1578162,
-    "sha256": "ac6d8d3e3a25a2d323f2650c103320f26bff4d47c3533068ef9ebed736ef706f"
+    "bytes": 1654523,
+    "sha256": "877f71c26c1920e86433141f5af45df5fda3e8e39bff73d861fae6d11b9ab8a0"
   },
   "renders/04_soffit_denoised.png": {
-    "bytes": 1175636,
-    "sha256": "2a85006b0ece3a26ae8c4e34c8acdb86c12a77f393699640b1ae7563ab26e97e"
+    "bytes": 1296324,
+    "sha256": "89ac4730fb45e45c7f63025cfaac0830b81e11e8ea6c7d2a8e53cac44f5fe713"
   }
 }

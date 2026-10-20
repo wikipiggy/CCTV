@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "depth_m": 0.03,
+  "version": 3,
+  "depth_m": 0.2,
   "bevel_m": 0.008,
   "max_outward_offset_m": 0,
   "checks": [
@@ -17,7 +17,7 @@
       "channel_area": 251.87168424021257,
       "fine_joint_area": 51.98337413649569,
       "domain_area": 2065.7587200201115,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 1,
@@ -32,7 +32,7 @@
       "channel_area": 250.94741025655838,
       "fine_joint_area": 51.80318491330141,
       "domain_area": 2056.75422347983,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 2,
@@ -47,7 +47,7 @@
       "channel_area": 250.94741025655838,
       "fine_joint_area": 51.80318491330141,
       "domain_area": 2056.75422347983,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 4,
@@ -62,7 +62,7 @@
       "channel_area": 361.23653802577815,
       "fine_joint_area": 75.48140743591222,
       "domain_area": 2978.487463864101,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 5,
@@ -77,7 +77,7 @@
       "channel_area": 362.7837685255058,
       "fine_joint_area": 75.6807686491872,
       "domain_area": 2991.642506879753,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 8,
@@ -92,7 +92,7 @@
       "channel_area": 250.01907195672192,
       "fine_joint_area": 51.657838071103775,
       "domain_area": 2047.7101314065694,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 9,
@@ -107,7 +107,7 @@
       "channel_area": 251.87168424021257,
       "fine_joint_area": 51.98337413649569,
       "domain_area": 2065.7587200201115,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 10,
@@ -122,7 +122,7 @@
       "channel_area": 250.94741025655838,
       "fine_joint_area": 51.80318491330141,
       "domain_area": 2056.75422347983,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 12,
@@ -137,7 +137,7 @@
       "channel_area": 361.23653802577815,
       "fine_joint_area": 75.48140743591222,
       "domain_area": 2978.487463864101,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 13,
@@ -152,7 +152,7 @@
       "channel_area": 362.7837685255058,
       "fine_joint_area": 75.6807686491872,
       "domain_area": 2991.642506879753,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 16,
@@ -167,7 +167,7 @@
       "channel_area": 250.94741025655838,
       "fine_joint_area": 51.80318491330141,
       "domain_area": 2056.75422347983,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 17,
@@ -182,7 +182,7 @@
       "channel_area": 251.87168424021257,
       "fine_joint_area": 51.98337413649569,
       "domain_area": 2065.7587200201115,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 20,
@@ -197,7 +197,7 @@
       "channel_area": 605.417982675661,
       "fine_joint_area": 120.42577862702363,
       "domain_area": 4770.7520156584105,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 21,
@@ -212,7 +212,7 @@
       "channel_area": 600.8492692833267,
       "fine_joint_area": 119.46162962035469,
       "domain_area": 4729.069829024821,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 22,
@@ -227,7 +227,7 @@
       "channel_area": 603.1386374694698,
       "fine_joint_area": 119.89289569308559,
       "domain_area": 4749.956644154851,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 23,
@@ -242,7 +242,7 @@
       "channel_area": 603.1386374694698,
       "fine_joint_area": 119.89289569308559,
       "domain_area": 4749.956644154851,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 24,
@@ -257,7 +257,7 @@
       "channel_area": 600.8492692833267,
       "fine_joint_area": 119.46162962035469,
       "domain_area": 4729.069829024821,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 25,
@@ -272,7 +272,7 @@
       "channel_area": 605.417982675661,
       "fine_joint_area": 120.42577862702363,
       "domain_area": 4770.7520156584105,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 26,
@@ -287,7 +287,7 @@
       "channel_area": 603.1386374694698,
       "fine_joint_area": 119.89289569308559,
       "domain_area": 4749.956644154851,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 27,
@@ -302,7 +302,7 @@
       "channel_area": 603.1386374694698,
       "fine_joint_area": 119.89289569308559,
       "domain_area": 4749.956644154851,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 28,
@@ -317,7 +317,7 @@
       "channel_area": 305.9322909919322,
       "fine_joint_area": 63.59443211217281,
       "domain_area": 2520.687190632677,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 29,
@@ -332,7 +332,7 @@
       "channel_area": 307.14276822205034,
       "fine_joint_area": 63.75407363270255,
       "domain_area": 2531.722791691894,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 30,
@@ -347,7 +347,7 @@
       "channel_area": 141.84376898236866,
       "fine_joint_area": 0.0,
       "domain_area": 1177.3461899043025,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 32,
@@ -362,7 +362,7 @@
       "channel_area": 444.53134904161055,
       "fine_joint_area": 92.34941059854975,
       "domain_area": 3666.454095465712,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 33,
@@ -377,7 +377,7 @@
       "channel_area": 408.2745907720336,
       "fine_joint_area": 85.38187357701614,
       "domain_area": 3360.54218136272,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 34,
@@ -392,7 +392,7 @@
       "channel_area": 205.11365945721843,
       "fine_joint_area": 0.0,
       "domain_area": 1712.503548951713,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 36,
@@ -407,7 +407,7 @@
       "channel_area": 307.14276822205034,
       "fine_joint_area": 63.75407363270255,
       "domain_area": 2531.722791691894,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 37,
@@ -422,7 +422,7 @@
       "channel_area": 278.5291894236172,
       "fine_joint_area": 58.84141773124206,
       "domain_area": 2310.37274968687,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 38,
@@ -437,7 +437,7 @@
       "channel_area": 285.1182694117642,
       "fine_joint_area": 58.901157079610435,
       "domain_area": 2322.4079364849335,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 40,
@@ -452,7 +452,7 @@
       "channel_area": 415.39171882937455,
       "fine_joint_area": 85.5444514147337,
       "domain_area": 3378.047907614449,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 41,
@@ -467,7 +467,7 @@
       "channel_area": 361.07479225329797,
       "fine_joint_area": 73.17797465832146,
       "domain_area": 2939.2423809477755,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 42,
@@ -482,7 +482,7 @@
       "channel_area": 209.38157887136362,
       "fine_joint_area": 0.0,
       "domain_area": 1712.503548951713,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 44,
@@ -497,7 +497,7 @@
       "channel_area": 224.43706328356376,
       "fine_joint_area": 46.50247666952468,
       "domain_area": 1852.090656329292,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 45,
@@ -512,7 +512,7 @@
       "channel_area": 249.03253737340054,
       "fine_joint_area": 51.69014831971978,
       "domain_area": 2034.4784652769383,
-      "depth_m": 0.03
+      "depth_m": 0.2
     },
     {
       "face": 46,
@@ -527,7 +527,7 @@
       "channel_area": 223.03483813055556,
       "fine_joint_area": 46.17672743613327,
       "domain_area": 1836.9767059790736,
-      "depth_m": 0.03
+      "depth_m": 0.2
     }
   ],
   "patches": [

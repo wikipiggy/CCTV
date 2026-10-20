@@ -1,8 +1,8 @@
 {
-  "version": 2,
+  "version": 3,
   "shell_height_m": 234.0,
   "real_recess_geometry": true,
-  "primary_depth_m": 0.03,
+  "primary_depth_m": 0.2,
   "fine_joint_depth_m": 0.003,
   "max_outward_offset_m": 0,
   "raycast_verification": [
@@ -15,7 +15,7 @@
         0
       ],
       "object": "Recessed diagonal channel floors",
-      "measured_depth_m": 0.02999890936189331
+      "measured_depth_m": 0.19999962579458952
     },
     {
       "patch": [
@@ -26,7 +26,7 @@
         -1
       ],
       "object": "Recessed diagonal channel floors",
-      "measured_depth_m": 0.02999890936189331
+      "measured_depth_m": 0.19999962579458952
     }
   ],
   "cameras": [
@@ -39,5 +39,12 @@
   ],
   "coverage_checks_passed": 35,
   "mesh_faces": 331392,
-  "external_images": []
+  "external_images": [],
+  "channel_material": {
+    "name": "Diagonal channels | matte dark grey",
+    "roughness": 1,
+    "specular": 0,
+    "coat": 0,
+    "appearance": "matte dark-grey coated metal"
+  }
 }

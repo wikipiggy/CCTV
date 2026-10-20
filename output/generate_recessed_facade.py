@@ -1,6 +1,6 @@
 """Generate real recessed curtain-wall geometry with planar polygon unions.
 Run with host Python: python -m pip install shapely; python generate_recessed_facade.py
-All diagonal intersections are united BEFORE glass is cut. Depths are visual estimates.
+All diagonal intersections are united BEFORE glass is cut. Depth 0.200 m is user specified; widths and chamfer are reference estimates.
 """
 import sys, os, math, json, gzip, random
 sys.path.insert(0,'/workspace/library-files/facade')
@@ -75,9 +75,9 @@ for fi,(q,kind,tag) in enumerate(facades):
    line=LineString([(candidates[0],slope*candidates[0]+b),(candidates[-1],slope*candidates[-1]+b)]).intersection(rect)
    if not line.is_empty:lines.append(line.buffer(.125,cap_style=2,join_style=2))
  G=unary_union(lines).intersection(rect);inner=G.buffer(-.008,join_style=2).intersection(rect);bevel=G.difference(inner)
- surface(inner,'Recessed diagonal channel floors',17,-.030)
+ surface(inner,'Recessed diagonal channel floors',17,-.200)
  surface(bevel,'Diagonal channel bevels',18,lambda x,y:-min(.006,G.boundary.distance(shapely.Point(x,y))*.75))
- walls(inner,'Recessed diagonal channel walls',17,-.006,-.030)
+ walls(inner,'Recessed diagonal channel walls',17,-.006,-.200)
  # Fine mullion lines are cut 3mm into the same datum instead of laid on top.
  fine=[];nu=max(1,round(U/1.65));nv=max(1,round(H/3.8))
  if kind=='wall':
@@ -96,12 +96,12 @@ for fi,(q,kind,tag) in enumerate(facades):
  else:
   panel=rect.difference(G);area=panel.area;surface(panel,'Curtain glass and shell',17,0)
  assert abs(area+F.area+G.area-rect.area)<.0001,(fi,'coverage',area+F.area+G.area,rect.area)
- checks.append({'face':fi,'tag':tag,'glass_area':area,'channel_area':G.area,'fine_joint_area':F.area,'domain_area':rect.area,'depth_m':.030})
+ checks.append({'face':fi,'tag':tag,'glass_area':area,'channel_area':G.area,'fine_joint_area':F.area,'domain_area':rect.area,'depth_m':.200})
  if tag in [[1,0,2,-1,0],[1,2,0,0,-1]]:
   x=54/2.64;y=1.32*x+18
   patches.append({'tag':tag,'point':pt(x,y),'normal':normal,'tangent':[(B[t]-A[t])/U for t in range(3)],'up':[(D[t]-A[t])/H for t in range(3)]})
  print('face',fi,kind,flush=True)
-result={'version':2,'depth_m':.030,'bevel_m':.008,'max_outward_offset_m':0,'meshes':{k:v.data() for k,v in meshes.items()},'checks':checks,'patches':patches}
+result={'version':3,'depth_m':.200,'bevel_m':.008,'max_outward_offset_m':0,'meshes':{k:v.data() for k,v in meshes.items()},'checks':checks,'patches':patches}
 with gzip.open(OUT+'/recessed_facade_geometry.json.gz','wt') as f:json.dump(result,f,separators=(',',':'))
 with open(OUT+'/recessed_facade_validation.json','w') as f:json.dump({k:v for k,v in result.items() if k!='meshes'},f,indent=2)
 print('COMPLETE',sum(len(m.f) for m in meshes.values()),'polygons',flush=True)
